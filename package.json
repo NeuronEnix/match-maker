@@ -1,0 +1,22 @@
+{
+  "name": "match-maker",
+  "version": "1.0.0",
+  "description": "game match maker ( party + room )",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NeuronEnix/match-maker.git"
+  },
+  "author": "Kaushik R Bangera",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NeuronEnix/match-maker/issues"
+  },
+  "homepage": "https://github.com/NeuronEnix/match-maker#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
