@@ -44,10 +44,20 @@ export class User {
   }
 
   addUserToMyTeam( userToBeAdded: User ) : boolean {
+    if ( this.userId === userToBeAdded.userId ) return false;
     if ( !this._team.hasVacancy(1) ) return false;
     this._team.addUser( userToBeAdded );
     userToBeAdded.team = this._team;
     return true;
+  }
+
+  leaveCurrentTeam() : Team {
+    const curTeam = this._team;
+    if ( curTeam.userCount === 1 ) return curTeam;
+    this._team.delUser( this );
+    this._team = new Team( this._config.maxUserInTeam );
+    this._team.addUser( this );
+    return curTeam;
   }
 
 }
