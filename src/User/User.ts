@@ -1,3 +1,4 @@
+import { TUserId, TUserInfo } from "../types/types";
 export class User {
 
   private _userId: TUserId;

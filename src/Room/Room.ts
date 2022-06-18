@@ -1,3 +1,4 @@
+import { TUserId, TRoomId, TRoomConfig } from "../types/types";
 import { Group } from "../Group/Group";
 
 let roomId: TRoomId = 1;

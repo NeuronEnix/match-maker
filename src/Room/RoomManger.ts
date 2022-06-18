@@ -1,3 +1,5 @@
+import { TRoomId, TRoomConfig } from "../types/types";
+
 import { Group } from "../Group/Group";
 import { Room } from "./Room";
 

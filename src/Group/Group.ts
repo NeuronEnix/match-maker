@@ -1,3 +1,4 @@
+import { TUserId, TGroupConfig } from "../types/types";
 import { User } from "../User/User";
 let groupIdAutoInc = 1;
 export class Group {
