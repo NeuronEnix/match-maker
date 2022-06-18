@@ -56,9 +56,18 @@ export class Group {
   }
   
   delUser( ...users: User[] ) : void {
-    users.forEach( user => this._userMap.delete( user.userId ) );
+
+    users.forEach( user => {
+      if ( user.userId === this.leader!.userId ) this._leader = null;
+      this._userMap.delete( user.userId )
+    });
+    
+    if( this._leader === null && this._userMap.size ) {
+      const leastRecentlyAddedUser = this._userMap.values().next().value;
+      this._leader = leastRecentlyAddedUser;
+    }
+
   }
-  
 
 }
 
