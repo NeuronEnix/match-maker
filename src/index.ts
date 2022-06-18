@@ -1,15 +1,25 @@
-import express, { Application, Request, Response, NextFunction } from "express";
+import express, { Application, Request, Response } from "express";
+import { mainRouter } from "./routes/mainRouter";
 
 const app: Application = express();
 const port: number = 3000;
 
-app.get('/', (req: Request, res: Response, next: NextFunction ) => {
-  res.send("hello");
-})
+// app.use( express.json(), ( req, res, next ) => {
+  
+//   console.log({
+//     method: req.method,
+//     path: req.path,
+//     body: req.body,
+//     query: req.query
+//   })
+//   return next();
 
-app.post( "/login", ( req:Request, res:Response ) => {
+// })
 
+app.get("/", ( req, res ) => {
+  return res.send( {msg:"home"});
 })
+app.use( mainRouter );
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
