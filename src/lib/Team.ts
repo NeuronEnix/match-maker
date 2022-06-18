@@ -43,7 +43,9 @@ export class Team {
     if ( !this.hasVacancy( users.length ) ) return false;
 
     if ( this._userMap.size == 0 ) this._leader = users[0];
-    users.forEach( user => this._userMap.set( user.userId, user ) );
+    users.forEach( user => {
+      this._userMap.set( user.userId, user );
+    });
     
     return true;
   }

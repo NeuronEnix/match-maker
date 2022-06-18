@@ -1,6 +1,7 @@
 
 import express, { Request, Response } from "express";
 import { TUserId, TUserInfo } from "src/lib/User";
+import { respond } from "../../response";
 import { userManager } from "../../resource";
 
 export const router = express.Router();
@@ -13,5 +14,5 @@ type TLoginReqBody = {
 export function userLoginController( req:Request, res:Response ) {
   const data: TLoginReqBody = req.body;
   userManager.addUser( data.userId, data.userInfo );
-  return res.send( { userId: req.body.userId });
+  return respond.ok( res, { userId: req.body.userId } );
 }
