@@ -49,6 +49,10 @@ export class Group {
   getUserIterator() : IterableIterator<User> {
     return this._userMap.values();
   }
+
+  forEachUser( callbackFn: ( user: User ) => void ) {
+    this._userMap.forEach( callbackFn );
+  }
   
   delUser( ...users: User[] ) : void {
     users.forEach( user => this._userMap.delete( user.userId ) );
