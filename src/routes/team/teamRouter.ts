@@ -4,5 +4,5 @@ import { leaveTeamController } from "./leaveTeamController";
 
 export const teamRouter = express.Router();
 
-teamRouter.post( "/joinTeam", express.json(), joinTeamController );
-teamRouter.post( "/leaveTeam", express.json(), leaveTeamController );
+teamRouter.post( "/join", express.json(), joinTeamController );
+teamRouter.post( "/leave", express.json(), leaveTeamController );

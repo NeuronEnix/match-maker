@@ -1,8 +1,8 @@
 import express, { Application, Request, Response } from "express";
-import { mainRouter } from "./routes/mainRouter";
+import { mainRouter } from "./routes";
 
 const app: Application = express();
-const port: number = 3000;
+const port: number = 3001;
 
 // app.use( express.json(), ( req, res, next ) => {
   

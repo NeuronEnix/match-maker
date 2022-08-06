@@ -1,0 +1,8 @@
+user/connect
+user/disconnect
+
+room/join
+room/leave
+
+team/join
+team/leave
